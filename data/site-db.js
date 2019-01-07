@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 assert = require("assert");
 
 // these a heroku env var
-const url = process.env.MONGODB_URI || "mongodb://localhost/divmond-db";
+const url = process.env.MONGODB_URI || "mongodb://localhost/site-db";
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
@@ -12,7 +12,7 @@ mongoose.connect(
   { useNewUrlParser: true},
   function(err, db) {
     assert.equal(null, err);
-    console.log("Connected successfully to Divmond's databasee");
+    console.log("Connected successfully to database");
 
     // db.close(); turn on for testing
   }
