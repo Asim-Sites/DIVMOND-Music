@@ -1,42 +1,32 @@
-# Create React Express App
+Personal Website
 
-## About This Boilerplate
+Do your best to address each of the items on the list below.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following commands:
-
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
-
-1. Build the React app for production by running the following command:
-
-```
-yarn build
-```
-
-2. Add and commit all changes to git
-
-3. Push to Heroku
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
+- Style your work
+   - Use *three* levels of hierarchy.
+   - Font styles, strive for legibility.
+       - Set the font-size on the *body* element in px.
+            - Why should I do this?
+       - Set the font size of *other elements* in em
+       - Set the color.
+       - You can use a different font-family for headings.
+       - Use *line-height* to set the line spacing (this helps legibility)
+       - Text should *not* touch an edge (You probably need padding on the parent)
+       - Try to get three levels of *hierarchy*.
+       - *Use flex box* to arrange things in vertical or horizontal groups
+- Code review with another student
+   - HTML: Check semantics and usage
+       - Check the comments and formatting
+       - Look at your tag choices an ask yourself about its relevance
+           - Does that content really deserve an h1 or article tag?
+       - Check the usage (be sure to consult the documentation for the tag!)
+           - Is that li inside a ul or ol?
+           - Do your sections have headings?
+           - Did you use all of the correct attributes?
+       - Check your work with the validator!
+       - https://validator.w3.org
+   - CSS: Check syntax and style rules.
+       - Style and formatting
+           - Follow the style guide: https://github.com/airbnb/css
+       - Did you use comments?
+           - Whether you feel you need them or not annotating your work is professional!

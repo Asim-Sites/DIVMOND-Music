@@ -1,29 +1,29 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
-const PORT = process.env.PORT || 3001;
+const express = require('express')
+const app = express()
+const exphbs = require('express-handlebars');
+const port = process.env.PORT || 3000
+const path = require('path') // research the path native node module
+const bodyParser = require('body-parser')
+// const anime = require('animejs');
 
-// Configure body parser for AJAX requests
-app.use(bodyParser.urlencoded({ extended: true }));
+app.set('views', path.join(__dirname, 'views'));
+
+app.engine('hbs', exphbs({
+  defaultLayout: "main",
+  extname: ".hbs",
+  helpers: require("handlebars-helpers")(),
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/'
+}));
+app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, 'public')));
+require('./data/personalwebsite-db.js');
+
 app.use(bodyParser.json());
-// Serve up static assets
-app.use(express.static("client/build"));
-// Add routes, both API and view
-app.use(routes);
-
-// Set up promises with mongoose
-mongoose.Promise = global.Promise;
-// Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
-  {
-    useMongoClient: true
-  }
-);
-
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(anime);
+app.get('/', (req, res) => {
+  res.render('index');
 });
+
+app.listen(process.env.PORT || port)

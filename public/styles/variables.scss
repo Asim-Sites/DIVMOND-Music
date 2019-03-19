@@ -1,0 +1,63 @@
+$bg: #141c3a;
+$primary: #488aff;
+$secondary: #32db64;
+$danger: #fa4359;
+$light: #f4f4f4;
+$fadelight: rgba(210, 209, 209, 0.968);
+$dark: #222;
+$verydark: #15141f;
+$purple: #6400e4;
+$mint: #6df0c2;
+$yellow: #ffc740;
+$lightblue: #2341AD;
+
+$textfont: 'Montserrat', serif;
+
+@font-face {
+  font-family: 'PokemonGB';
+  src: url('/assets/fonts/pokemon-font/PokemonGB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+// scss variables required to be compiled before, css variables are made at root and can be used in
+// javascript as well!
+// :root {
+//   --color-red: #f00;
+// }
+// Media Query Breakpoints mixins - screen size definitions
+
+// body {
+    // background-color: var(--color-red);
+// }
+
+// Small tablets and large smartphones (landscape view)
+$small-phone-width: 310px;
+
+// Small tablets (portrait view)
+$tablet-width: 768px;
+
+// Large tablets and desktops
+$desktop-width: 1200px;
+
+// we will design for mobile first so only need to media query tablets and desktop views.
+@mixin phone {
+    @media (min-width: #{$small-phone-width}) {
+        @content;
+      }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }

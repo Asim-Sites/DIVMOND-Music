@@ -1,27 +1,25 @@
 {
-  "name": "mern",
+  "name": "personalwebsite",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "seed": "node scripts/seedDB.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwesomeZaidi/personalwebsite.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+  "bugs": {
+    "url": "https://github.com/AwesomeZaidi/personalwebsite/issues"
   },
+  "homepage": "https://github.com/AwesomeZaidi/personalwebsite#readme",
   "dependencies": {
-    "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "mongoose": "^4.11.7"
+    "animejs": "^3.0.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars-helpers": "^0.10.0"
   }
 }
