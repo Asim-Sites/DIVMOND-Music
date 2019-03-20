@@ -1,12 +1,13 @@
-const express = require("express");
-const app = express();
-const path = require('path') // research the path native node module
+const express = require('express')
+const app = express()
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser')
-const methodOverride = require('method-override');
 const port = process.env.PORT || 3000
-app.use(methodOverride('_method'));
+const path = require('path') // research the path native node module
+const bodyParser = require('body-parser')
+// const anime = require('animejs');
+
 app.set('views', path.join(__dirname, 'views'));
+
 app.engine('hbs', exphbs({
   defaultLayout: "main",
   extname: ".hbs",
@@ -16,21 +17,13 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
-require('./data/site-db');
+require('./data/personalwebsite-db.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// app.use(expressValidator());
-
-// routers
-const indexRouter = require('./controllers/index');
-app.use(indexRouter);
-const authRouter = require('./controllers/auth');
-app.use(authRouter);
-
-app.listen(port, () =>{
-    console.log(`Server is listening on ${port}`);
+// app.use(anime);
+app.get('/', (req, res) => {
+  res.render('index');
 });
-module.exports = { app }
- 
+
+app.listen(process.env.PORT || port)
