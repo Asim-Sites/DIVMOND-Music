@@ -1,5 +1,5 @@
 {
-  "name": "personalwebsite",
+  "name": "divmond_music",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AwesomeZaidi/personalwebsite.git"
+    "url": "git+https://github.com/Tech-Made/DIVMOND-Music.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AwesomeZaidi/personalwebsite/issues"
+    "url": "https://github.com/Tech-Made/DIVMOND-Music/issues"
   },
-  "homepage": "https://github.com/AwesomeZaidi/personalwebsite#readme",
+  "homepage": "https://github.com/Tech-Made/DIVMOND-Music#readme",
   "dependencies": {
     "animejs": "^3.0.1",
     "express": "^4.16.4",

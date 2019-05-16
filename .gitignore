@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/git,sass,node,data,visualstudio
 # Edit at https://www.gitignore.io/?templates=git,sass,node,data,visualstudio
 
+data
+*.override.yml
+
 ### Data ###
 *.csv
 *.dat
