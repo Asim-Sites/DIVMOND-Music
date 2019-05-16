@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars');
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 const path = require('path') // research the path native node module
 const bodyParser = require('body-parser')
 // const anime = require('animejs');
